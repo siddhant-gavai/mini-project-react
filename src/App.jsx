@@ -6,8 +6,6 @@ import Button from "@mui/material/Button";
 import SearchBox from "./SearchBox";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <SearchBox />
