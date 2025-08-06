@@ -4,11 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "@mui/material/Button";
 import SearchBox from "./SearchBox";
+import InfoBox from "./InfoBox";
 
 function App() {
   return (
     <>
       <SearchBox />
+      <InfoBox />
     </>
   );
 }

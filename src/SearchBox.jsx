@@ -16,6 +16,7 @@ export default function SerchBox() {
     let jsonResponse = await response.json();
 
     let result = {
+      city: city,
       temp: jsonResponse.main.temp,
       tepMin: jsonResponse.main.temp_min,
       temMax: jsonResponse.main.temp_max,
