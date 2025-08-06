@@ -1,0 +1,11 @@
+/* InfoBox.css */
+.InfoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.InfoBoxCard {
+  width: 100%;
+  max-width: 360px;
+}

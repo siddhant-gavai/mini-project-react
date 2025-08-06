@@ -1,9 +1,8 @@
 import Card from "@mui/material/Card";
-
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-
 import Typography from "@mui/material/Typography";
+import "./InfoBox.css";
 
 export default function InfoBox() {
   const INITIAL_IMG =
@@ -19,35 +18,26 @@ export default function InfoBox() {
   };
   return (
     <div className="InfoBox">
-      <h1>Weathernfo </h1>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card className="InfoBoxCard" sx={{ boxShadow: 3 }}>
         <CardMedia
           sx={{ height: 140 }}
           image={INITIAL_IMG}
-          title="green iguana"
+          title="Weather Image"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5">
             {info.city}
           </Typography>
-          <Typography
-            component={"span"}
-            variant="body2"
-            sx={{ color: "text.secondary" }}
-          >
-            <div> Temprature = {info.temp}&deg;C </div>
-            <div> Minimum Temprature = {info.tepMin}&deg;C </div>
-            <div> Maximum Temprature = {info.temMax}&deg;C </div>
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            <div>Temperature: {info.temp}&deg;C</div>
             <div>
-              {" "}
-              The weather can be describe as{" "}
-              <b>
-                {" "}
-                <i>{info.weather} </i>{" "}
-              </b>{" "}
-              FeelsLike = {info.feelsLike}&deg;C
+              Min: {info.tepMin}&deg;C | Max: {info.temMax}&deg;C
             </div>
-            <div> Humidity = {info.humidity} </div>
+            <div>Feels Like: {info.feelsLike}&deg;C</div>
+            <div>Humidity: {info.humidity}%</div>
+            <div>
+              Weather: <i>{info.weather}</i>
+            </div>
           </Typography>
         </CardContent>
       </Card>

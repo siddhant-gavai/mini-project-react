@@ -8,10 +8,10 @@ import InfoBox from "./InfoBox";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <SearchBox />
       <InfoBox />
-    </>
+    </div>
   );
 }
 
