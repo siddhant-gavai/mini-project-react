@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import "./SearchBox.css";
 import { useState } from "react";
 
-export default function SerchBox() {
+export default function SerchBox({ updateInfo }) {
   let [city, setCity] = useState("");
 
   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -25,21 +25,21 @@ export default function SerchBox() {
       weather: jsonResponse.weather[0].description,
     };
     console.log(result);
+    return result;
   };
 
   let handleChange = (e) => {
     setCity(e.target.value);
   };
-  let handleSubmit = (e) => {
+  let handleSubmit = async (e) => {
     e.preventDefault();
     console.log(city);
     setCity("");
-    getWeatherInfo();
+    let newInfo = await getWeatherInfo();
+    updateInfo(newInfo);
   };
   return (
     <div className="serbox-container">
-      <h3 className="serbox-heading">🌤️ Search for the Weather</h3>
-
       <form className="serbox-form" onSubmit={handleSubmit}>
         <TextField
           id="city"
