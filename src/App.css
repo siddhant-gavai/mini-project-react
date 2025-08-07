@@ -1,16 +1,17 @@
-/* App.css */
-.app-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .app-container {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }

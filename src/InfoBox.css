@@ -1,11 +1,23 @@
-/* InfoBox.css */
-.InfoBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.infobox-container {
+  width: 100%;
+  max-width: 350px;
 }
 
-.InfoBoxCard {
-  width: 100%;
-  max-width: 360px;
+.infobox-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.infobox-media {
+  height: 160px;
+}
+
+.infobox-text div {
+  margin: 6px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.infobox-title {
+  font-weight: bold;
 }

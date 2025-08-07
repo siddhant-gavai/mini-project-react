@@ -1,6 +1,7 @@
 import SerchBox from "./SearchBox";
 import InfoBox from "./InfoBox";
 import { useState } from "react";
+import "./WeatherApp.css"; // make sure this is imported
 
 export default function WeatherApp() {
   const [weatherInfo, setWeatherInfo] = useState({
@@ -13,13 +14,16 @@ export default function WeatherApp() {
     weather: "overcast clouds",
   });
 
-  let updateInfo = (newInfo) => {
-    setWeatherInfo(newInfo);
+  let updateInfo = (result) => {
+    setWeatherInfo(result);
   };
+
   return (
-    <div>
-      <h2>Weather App By Siddhant 🌤️ </h2>
-      <SerchBox updateInfo={updateInfo} />
+    <div className="weather-app-container">
+      <div>
+        <h2 className="weather-heading">Weather App By Siddhant 🌤️</h2>
+        <SerchBox updateInfo={updateInfo} />
+      </div>
       <InfoBox info={weatherInfo} />
     </div>
   );
